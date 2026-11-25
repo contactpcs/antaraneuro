@@ -1,0 +1,804 @@
+/* ==========================================================================
+   AntaraNeuro CLINICS — Responsive
+   responsive.css — Breakpoints (mobile-first approach)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Tablet (< 1024px) — hide desktop nav, show toggle
+   -------------------------------------------------------------------------- */
+
+/* --------------------------------------------------------------------------
+   Navigation — tighten link spacing before the hamburger takes over.
+   Six primary links plus the CTA is a snug fit between 1024px and ~1200px,
+   so the gap closes up slightly in that band rather than risking an overlap.
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 1200px) and (min-width: 1024px) {
+  .nav__links {
+    gap: var(--space-5);
+  }
+
+  .nav__cta {
+    padding: var(--space-3) var(--space-5);
+  }
+
+  .nav__actions { gap: var(--space-4); }
+}
+
+@media (max-width: 1023px) {
+  :root { --nav-height: 64px; }
+
+  /* Security band — two-up on tablet */
+  .platform__security-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  /* Conditions — tighten primary tiles on tablet */
+  .condition-tile {
+    min-height: 170px;
+    padding: var(--space-8) var(--space-4);
+  }
+
+  /* Platform — stack rows, visual below copy */
+  .pf-row {
+    grid-template-columns: 1fr;
+    gap: var(--space-10);
+  }
+
+  .pf-row--rev .pf-row__content,
+  .pf-row--rev .pf-row__visual { order: 0; }
+
+  .platform__rows { gap: var(--space-16); }
+  .platform__header { margin-bottom: var(--space-12); }
+
+  /* Devices — stack copy above certificate grid */
+  .devices__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-10);
+  }
+
+  /* Eligibility check — stack the intro above the supporting facts */
+  .checkup__inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-12);
+  }
+
+  /* Corporate — single column of problems, then responses */
+  .corporate__body {
+    gap: var(--space-10);
+  }
+
+  .corporate__outcomes {
+    padding: var(--space-8);
+  }
+
+  .nav__links,
+  .nav__cta,
+  .nav__login { display: none; }
+
+  .nav__toggle { display: flex; }
+
+  /* Floating nav with gap from top edge */
+  .nav {
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: 100vw;
+    height: var(--nav-height);
+    padding: 0;
+    border-radius: var(--radius-md);
+    background-color: rgba(244, 241, 234, 0.92);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-sizing: border-box;
+  }
+
+  .nav--scrolled {
+    background-color: rgba(244, 241, 234, 0.95);
+  }
+
+  /* Founder */
+  .founder__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-12);
+  }
+
+  /* Co-founder / doctor card grids */
+  .grid-2 {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  /* Treatment detail sections (tDCS/tVNS/TMS/TPS) */
+  .split-grid {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-10) !important;
+  }
+
+  /* Safety/approach icon grid — 2 columns on tablet */
+  .grid-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .founder__quote-float {
+    position: relative;
+    bottom: auto; right: auto;
+    max-width: 100%;
+    margin-top: var(--space-4);
+  }
+
+  .founder__frame-accent { display: none; }
+
+  /* Steps — wrap to 3 col */
+  .steps-track {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-8);
+  }
+
+  .steps-track::before { display: none; }
+
+  /* Journey */
+  .journey__item {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+    direction: ltr !important;
+  }
+
+  .journey__item:nth-child(even) { direction: ltr; }
+
+  /* Footer */
+  .footer__main {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-8);
+  }
+
+  /* Mobile CTA bar */
+  .mobile-cta-bar { display: flex; }
+  .footer { padding-bottom: 76px; }
+
+  /* Hero — stack the copy above the visual */
+  .hero {
+    padding: calc(var(--nav-height) + var(--space-12)) 0 var(--space-16);
+  }
+
+  .hero__inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-12);
+  }
+
+  /* Cards sit below the copy once stacked: lay them out in a wrapping row so
+     they read as a band rather than a tall column. */
+  .hero__cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+  }
+
+  .hero__card {
+    flex: 1 1 15rem;
+    max-width: none;
+  }
+
+  .hero__card--one,
+  .hero__card--two,
+  .hero__card--three {
+    margin-left: 0;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Small Tablet (< 768px)
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 767px) {
+
+  :root {
+    --space-24: 4.5rem;
+    --space-32: 5.5rem;
+  }
+
+  .section { padding: var(--space-20) 0; }
+  .section--lg { padding: var(--space-24) 0; }
+  .trust-bar { display: none; }
+
+  .hero__cards {
+    gap: var(--space-3);
+  }
+
+  /* Conditions — single column accordion on mobile */
+  .conditions__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+
+  .condition-card {
+    padding: var(--space-5) var(--space-6);
+    display: grid;
+    grid-template-columns: 40px 1fr 28px;
+    grid-template-rows: auto auto auto;
+    column-gap: var(--space-4);
+    row-gap: 0;
+    align-items: start;
+  }
+
+  .condition-card__icon {
+    grid-column: 1;
+    grid-row: 1;
+    width: 32px;
+    height: 32px;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .condition-card__icon svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .condition-card__title {
+    grid-column: 2;
+    grid-row: 1;
+    font-size: var(--text-base);
+    line-height: 1.3;
+    margin-bottom: 0;
+    align-self: center;
+  }
+
+  /* Expand indicator */
+  .condition-card__expand {
+    grid-column: 3;
+    grid-row: 1;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1.5px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    flex-shrink: 0;
+    transition: border-color var(--transition-base), background var(--transition-base);
+    font-size: 1.2rem;
+    line-height: 1;
+    color: var(--graphite);
+    margin-top: 2px;
+  }
+
+  .condition-card__expand::after {
+    content: '+';
+    font-size: 0.95rem;
+    font-weight: 400;
+    line-height: 1;
+  }
+
+  .condition-card.active .condition-card__expand {
+    background-color: var(--clay);
+    border-color: var(--clay);
+    color: var(--white);
+  }
+
+  .condition-card.active .condition-card__expand::after {
+    content: '−';
+  }
+
+  .condition-card__excerpt {
+    grid-column: 2 / 4;
+    grid-row: 2;
+    font-size: var(--text-sm);
+    margin-top: var(--space-2);
+    line-height: 1.55;
+  }
+
+  .condition-card__detail {
+    grid-column: 1 / 4;
+    grid-row: 3;
+    margin-top: var(--space-4);
+    padding-top: var(--space-4);
+    border-top: 1px solid var(--color-border-light);
+  }
+
+  /* Steps single column wrap */
+  .steps-track {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-6);
+  }
+
+  /* Treatments */
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  /* Safety/approach icon grid — single column on narrow mobile */
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  /* Stats */
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Testimonials */
+  .testimonials__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Clinics — accordion layout on mobile */
+  .clinics__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+
+  .clinic-card {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  /* Announcement card has no image and does not collapse — opt out of the accordion */
+  .clinic-card--announce {
+    cursor: default;
+  }
+
+  .clinic-card--announce .clinic-card__body {
+    display: block;
+    order: 1;
+    padding: var(--space-8) var(--space-5);
+  }
+
+  .clinic-card--announce .clinic-card__name {
+    font-size: var(--text-xl);
+    margin-bottom: var(--space-4);
+  }
+
+  .clinic-card__image {
+    order: 2;
+    height: 180px;
+    flex-shrink: 0;
+  }
+
+  .clinic-card__image-text { font-size: 3rem; }
+
+  .clinic-card__body {
+    order: 1;
+    padding: var(--space-5) var(--space-5);
+    display: grid;
+    grid-template-columns: 1fr 28px;
+    grid-template-rows: auto auto auto auto;
+    column-gap: var(--space-3);
+    row-gap: 0;
+    align-items: start;
+  }
+
+  .clinic-card__name {
+    grid-column: 1;
+    grid-row: 1;
+    font-size: var(--text-base);
+    margin-bottom: 0;
+    align-self: center;
+  }
+
+  .clinic-card__city {
+    grid-column: 1;
+    grid-row: 2;
+    margin-top: var(--space-1);
+    margin-bottom: 0;
+  }
+
+  .clinic-card__expand {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1.5px solid var(--color-border);
+    flex-shrink: 0;
+    transition: border-color var(--transition-base), background var(--transition-base);
+    color: var(--graphite);
+  }
+
+  .clinic-card__expand::after {
+    content: '+';
+    font-size: 0.95rem;
+    font-weight: 400;
+    line-height: 1;
+  }
+
+  .clinic-card.active .clinic-card__expand {
+    background-color: var(--clay);
+    border-color: var(--clay);
+    color: var(--white);
+  }
+
+  .clinic-card.active .clinic-card__expand::after { content: '−'; }
+
+  .clinic-card__details {
+    grid-column: 1 / 3;
+    grid-row: 3;
+    display: none;
+    flex-direction: column;
+    gap: var(--space-3);
+    margin-top: var(--space-4);
+    padding-top: var(--space-4);
+    border-top: 1px solid var(--color-border-light);
+  }
+
+  .clinic-card.active .clinic-card__details { display: flex; }
+
+  .clinic-card__actions {
+    grid-column: 1 / 3;
+    grid-row: 4;
+    display: none;
+    flex-direction: column;
+    gap: var(--space-3);
+    margin-top: var(--space-4);
+  }
+
+  .clinic-card.active .clinic-card__actions { display: flex; }
+
+  .clinic-card__actions .btn {
+    justify-content: center;
+    width: 100%;
+  }
+
+  /* Footer */
+  .footer__main {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer__legal {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-2) var(--space-5);
+  }
+
+  /* Comfortable tap targets for footer navigation on touch screens */
+  .footer__link,
+  .footer__legal-link {
+    display: inline-block;
+    padding: var(--space-2) 0;
+  }
+
+  .footer__links {
+    gap: 0;
+  }
+
+  /* Form grid */
+  .form-grid { grid-template-columns: 1fr; }
+
+  /* Hero trust */
+  .hero__trust {
+    gap: var(--space-5);
+  }
+
+  .hero__trust-item { font-size: var(--text-xs); }
+}
+
+/* --------------------------------------------------------------------------
+   Mobile (< 640px)
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 639px) {
+
+  :root {
+    --space-24: 3.5rem;
+    --space-32: 4.5rem;
+    --space-20: 3.5rem;
+  }
+
+  /* Conditions — single column tiles on phones */
+  .conditions__primary {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+
+  .condition-tile {
+    min-height: 0;
+    flex-direction: row;
+    justify-content: flex-start;
+    text-align: left;
+    gap: var(--space-5);
+    padding: var(--space-5) var(--space-6);
+  }
+
+  /* Security band stacks on phones */
+  .platform__security-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+  }
+
+  /* Platform — compress mockups for small screens */
+  .platform__rows { gap: var(--space-12); }
+
+  .pf-screen__body {
+    padding: var(--space-4);
+    gap: var(--space-4);
+  }
+
+  .pf-stats,
+  .pf-gauges {
+    grid-template-columns: 1fr;
+    gap: var(--space-2);
+  }
+
+  .pf-stat,
+  .pf-gauge {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--space-3);
+    text-align: left;
+    padding: var(--space-3) var(--space-4);
+  }
+
+  .pf-stat__num,
+  .pf-gauge__val { margin-bottom: 0; }
+
+  .pf-cards { grid-template-columns: 1fr; }
+
+  .pf-suggest {
+    flex-wrap: wrap;
+    gap: var(--space-3);
+  }
+
+  .pf-suggest__body { flex-basis: 100%; order: 3; }
+
+  .pf-float {
+    position: static;
+    display: inline-block;
+    margin-top: var(--space-4);
+    max-width: 100%;
+    white-space: normal;
+  }
+
+  .pf-tag { white-space: normal; }
+
+  .pf-chart svg { height: 90px; }
+
+  /* Devices — single column certificates */
+  .devices__certs { grid-template-columns: 1fr; }
+  .cert-card--wide { grid-column: auto; }
+
+  /* People — stack doctor cards */
+  .doctor-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-4);
+  }
+
+  .doctor-card__avatar {
+    width: 72px;
+    height: 72px;
+  }
+
+  .condition-mini {
+    padding: var(--space-3) var(--space-5);
+  }
+
+  .container,
+  .container--narrow,
+  .container--wide {
+    padding: 0 var(--space-5);
+  }
+
+  /* Hero — mobile: light, stacked, full-width actions */
+  .hero {
+    padding: calc(var(--nav-height) + var(--space-10)) 0 var(--space-12);
+  }
+
+  /* Portrait crop of the texture, and a flatter veil: on a narrow screen the
+     copy sits directly over the background rather than beside it. */
+  .hero::before {
+    background-image:
+      linear-gradient(to bottom, rgba(244, 241, 234, 0.78) 0%, rgba(244, 241, 234, 0.60) 50%, rgba(244, 241, 234, 0.34) 100%),
+      url('../assets/images/hero-texture-mobile.jpg');
+  }
+
+  .hero__glow {
+    top: -16rem;
+    right: -12rem;
+    width: 30rem;
+    height: 30rem;
+  }
+
+  .hero__actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-3);
+  }
+
+  .hero__actions .btn {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .hero__trust {
+    gap: var(--space-4);
+    margin-top: var(--space-8);
+    padding-top: var(--space-5);
+  }
+
+  .hero__cards {
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .hero__card {
+    flex: 1 1 auto;
+    width: 100%;
+    max-width: none;
+    padding: var(--space-4) var(--space-5);
+  }
+
+  /* Conditions */
+  .conditions__grid { grid-template-columns: 1fr; }
+
+  /* Steps */
+  .steps-track { grid-template-columns: 1fr; gap: var(--space-6); }
+
+  /* Journey */
+  .journey__spine { display: none; }
+  .journey__items { padding-left: 0; }
+  .journey__dot { display: none; }
+
+  .journey__num {
+    font-size: 4rem;
+  }
+
+  /* Final CTA */
+  .final-cta__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .final-cta__actions .btn { justify-content: center; }
+
+  /* Mobile CTA bar */
+  .mobile-cta-bar { display: flex; }
+
+  .mobile-cta-bar .btn {
+    flex: 1;
+    justify-content: center;
+    padding: var(--space-4) var(--space-4);
+    font-size: 11px;
+  }
+
+  .footer { padding-bottom: 72px; }
+
+  /* Page hero */
+  .page-hero__title { font-size: 2.5rem; }
+
+  /* Treatment detail visuals (tDCS/tVNS/TMS/TPS) — cap height on mobile */
+  .treatment-visual {
+    aspect-ratio: auto !important;
+    height: 220px;
+  }
+
+  .treatment-watermark {
+    font-size: 4rem !important;
+  }
+
+  /* Co-founder cards — stack avatar above bio on narrow phones */
+  .cofounder-card {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: var(--space-4);
+    padding: var(--space-6);
+  }
+
+  .cofounder-card__avatar {
+    width: 72px;
+    height: 72px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Narrow Mobile (< 480px)
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 479px) {
+
+  .container,
+  .container--narrow,
+  .container--wide {
+    padding: 0 var(--space-4);
+  }
+
+  .hero__headline {
+    font-size: 1.75rem;
+    line-height: 1.16;
+  }
+
+  .hero__subheadline {
+    font-size: 0.95rem;
+    line-height: 1.68;
+    margin-bottom: var(--space-7);
+  }
+
+  .hero__trust {
+    margin-top: var(--space-8);
+    padding-top: var(--space-6);
+    gap: var(--space-3);
+  }
+
+  .hero__trust-item {
+    font-size: var(--text-xs);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Large Desktop (> 1400px)
+   -------------------------------------------------------------------------- */
+
+@media (min-width: 1400px) {
+
+  :root {
+    --container-max: 1360px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Reduced Motion
+   -------------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .pf-row__visual:hover .pf-screen { transform: none; }
+  .condition-tile:hover { transform: none; }
+
+
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Print
+   -------------------------------------------------------------------------- */
+
+@media print {
+
+  .nav,
+  .mobile-cta-bar,
+  .hero__card,
+  .hero__glow,
+  .final-cta,
+  .footer__social { display: none; }
+
+  body {
+    font-size: 12pt;
+    color: #000;
+    background: #fff;
+  }
+
+  .hero {
+    display: block;
+    min-height: auto;
+    padding: 2rem 0;
+  }
+  .hero__cards { display: none; }
+
+  .hero__headline { color: #000; font-size: 2rem; }
+}

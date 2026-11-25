@@ -1,0 +1,386 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AntaraNeuro Clinics supports mild and chronic depression, chronic pain, anxiety disorders, and neurological rehabilitation with evidence-based neurotherapy.">
+  <title>Conditions We Treat — AntaraNeuro Clinics</title>
+  <link rel="canonical" href="https://antaraneuroclinics.com/conditions.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AntaraNeuro Clinics">
+  <meta property="og:title" content="Conditions We Treat — AntaraNeuro Clinics">
+  <meta property="og:description" content="Depression, chronic pain, anxiety disorders and neurological rehabilitation, supported with evidence-based neurotherapy.">
+  <meta property="og:url" content="https://antaraneuroclinics.com/conditions.html">
+  <meta property="og:image" content="https://antaraneuroclinics.com/assets/images/og-antaraneuro-square.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="600">
+  <meta property="og:image:height" content="600">
+  <meta property="og:image:alt" content="AntaraNeuro Clinics">
+  <meta name="twitter:image" content="https://antaraneuroclinics.com/assets/images/og-antaraneuro-square.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Conditions We Treat — AntaraNeuro Clinics">
+  <meta name="twitter:description" content="Depression, chronic pain, anxiety disorders and neurological rehabilitation, supported with evidence-based neurotherapy.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/styles.css?v=2220ceaa">
+  <link rel="stylesheet" href="css/components.css?v=89c07909">
+  <link rel="stylesheet" href="css/responsive.css?v=b5ddd52d">
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <style>
+    /* ---- Conditions page — mobile responsive ---- */
+    .cond-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-20);
+      align-items: start;
+    }
+    @media (max-width: 767px) {
+      .cond-row {
+        grid-template-columns: 1fr !important;
+        gap: var(--space-8) !important;
+      }
+      /* Visual-first rows: put the heading above the artwork on phones */
+      .cond-row--visual-first > *:first-child { order: 2; }
+      .cond-row--visual-first > *:last-child { order: 1; }
+      /* Tall decorative panels waste height once stacked */
+      .cond-row--visual-first > *:first-child { aspect-ratio: 16 / 10 !important; }
+      /* Improve image visibility on mobile */
+      .cond-row .img-fill { opacity: 0.65 !important; }
+      .cond-img-wrap .img-fill { opacity: 0.65 !important; }
+      /* Stat block full width on mobile */
+      .cond-stat { width: 100%; }
+      /* Further conditions grid */
+      .grid-3 { grid-template-columns: 1fr !important; }
+    }
+    @media (max-width: 479px) {
+      .cond-row { gap: var(--space-6) !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <nav class="nav nav--scrolled" role="navigation" aria-label="Main navigation">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="AntaraNeuro Clinics — Home">
+        <img src="assets/images/logo.png" alt="AntaraNeuro Clinics" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+        <span class="nav__logo-text" style="display:none;">AntaraNeuro</span>
+      </a>
+      <ul class="nav__links" role="list">
+        <li><a href="about.html" class="nav__link">Our Story</a></li>
+        <li><a href="conditions.html" class="nav__link nav__link--active">Conditions</a></li>
+        <li><a href="treatments.html" class="nav__link">Treatments</a></li>
+        <li><a href="platform.html" class="nav__link">Our Platform</a></li>
+        <li><a href="corporate-wellness.html" class="nav__link">Corporate</a></li>
+        <li><a href="locations.html" class="nav__link">Clinics</a></li>
+        <li><a href="contact.html" class="nav__link">Contact</a></li>
+      </ul>
+      <div class="nav__actions">
+        <a href="https://app.antaraneuroclinics.com/login" class="nav__login" title="Patient / Clinic Login"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Login</a>
+        <a href="contact.html" class="nav__cta">Book Consultation</a>
+      </div>
+      <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="nav__toggle-line"></span>
+        <span class="nav__toggle-line"></span>
+        <span class="nav__toggle-line"></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="nav__mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile navigation" aria-modal="true">
+    <a href="about.html" class="nav__mobile-link">Our Story</a>
+    <a href="conditions.html" class="nav__mobile-link">Conditions</a>
+    <a href="treatments.html" class="nav__mobile-link">Treatments</a>
+    <a href="platform.html" class="nav__mobile-link">Our Platform</a>
+    <a href="corporate-wellness.html" class="nav__mobile-link">Corporate</a>
+    <a href="locations.html" class="nav__mobile-link">Clinics</a>
+    <a href="contact.html" class="nav__mobile-link">Contact</a>
+    <a href="https://app.antaraneuroclinics.com/login" class="nav__mobile-link">Patient / Clinic Login</a>
+    <a href="contact.html" class="btn btn--primary nav__mobile-cta">Book a Consultation</a>
+  </div>
+
+  <main id="main">
+
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container">
+        <p class="section-label" style="color:var(--brass);">Conditions we treat</p>
+        <h1 class="page-hero__title" id="page-title">
+          You may not have been<br>
+          <em>given all your options yet</em>
+        </h1>
+        <p class="page-hero__subtitle">
+          AntaraNeuro specialises in conditions where conventional treatment has not provided adequate relief. Each patient is assessed individually, without assumptions.
+        </p>
+      </div>
+    </section>
+
+    <!-- Depression -->
+    <section class="section section--lg bg-bone" id="depression" aria-labelledby="depression-title">
+      <div class="container">
+        <div class="cond-row">
+          <div>
+            <p class="section-label reveal">01</p>
+            <h2 style="font-size:clamp(2rem,4vw,var(--text-4xl)); color:var(--deep-pine); margin-bottom:var(--space-5); font-weight:300; line-height:1.15;" class="reveal reveal-delay-1" id="depression-title">
+              Depression —<br>Mild &amp; Chronic
+            </h2>
+            <p style="color:var(--color-text-muted); line-height:var(--leading-relaxed); margin-bottom:var(--space-5);" class="reveal reveal-delay-2">
+              Depression exists on a spectrum — from mild but persistent low mood that affects daily function, to chronic depression that has endured for years. Both forms can be profoundly debilitating, and both can leave patients feeling that conventional approaches haven't provided adequate relief.
+            </p>
+            <p style="color:var(--color-text-muted); line-height:var(--leading-relaxed); margin-bottom:var(--space-5);" class="reveal reveal-delay-2">
+              Whether you've tried medication, therapy, or both — neurotherapy works through entirely different mechanisms, directly modulating the neural circuits involved in mood regulation rather than through systemic brain chemistry. This opens a new avenue for patients across the mild-to-chronic spectrum.
+            </p>
+            <p style="color:var(--color-text-muted); line-height:var(--leading-relaxed); margin-bottom:var(--space-8);" class="reveal reveal-delay-3">
+              tDCS (Transcranial Direct Current Stimulation) and tVNS (transcutaneous auricular Vagus Nerve Stimulation) are the therapies AntaraNeuro Clinics offers today, with published research supporting their use in mood regulation and depressive symptoms. TMS, which has FDA clearance for depression and decades of clinical use, will join our offering as we grow.
+            </p>
+            <a href="contact.html" class="btn btn--pine reveal reveal-delay-4">
+              Ask if this could help you
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+          <div>
+            <div class="reveal" style="background:var(--white); border:1px solid var(--color-border); padding:var(--space-8); margin-bottom:var(--space-4);">
+              <h3 style="font-family:var(--font-display); font-size:var(--text-lg); color:var(--deep-pine); margin-bottom:var(--space-4);">Relevant therapies</h3>
+              <ul style="display:flex; flex-direction:column; gap:var(--space-3);">
+                <li style="display:flex; align-items:center; gap:var(--space-3); font-size:var(--text-sm); color:var(--color-text-muted);">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brass)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                  <a href="treatments.html#tdcs" style="color:var(--deep-pine); font-weight:500;">tDCS</a> &mdash; available now, primary option
+                </li>
+                <li style="display:flex; align-items:center; gap:var(--space-3); font-size:var(--text-sm); color:var(--color-text-muted);">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brass)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                  <a href="treatments.html#tvns" style="color:var(--deep-pine); font-weight:500;">tVNS</a> &mdash; available now, mood &amp; stress regulation
+                </li>
+                <li style="display:flex; align-items:center; gap:var(--space-3); font-size:var(--text-sm); color:var(--color-text-muted);">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brass)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                  <a href="treatments.html#tms" style="color:var(--deep-pine); font-weight:500;">TMS</a> &mdash; joining our offering as we grow
+                </li>
+              </ul>
+            </div>
+            <div class="reveal reveal-delay-1" style="background:var(--deep-pine); padding:0; position:relative; overflow:hidden; min-height:160px;">
+              <img
+                src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=900&q=80"
+                alt="tDCS neurotherapy — available treatment for treatment-resistant depression"
+                loading="lazy"
+                class="img-fill"
+                style="opacity:0.55;"
+              >
+              <div class="img-overlay" style="background:linear-gradient(160deg, rgba(21,41,32,0.55) 0%, rgba(31,59,52,0.75) 100%);"></div>
+              <div style="position:relative; z-index:2; padding:var(--space-8);">
+                <p style="font-family:var(--font-display); font-size:var(--text-5xl); font-weight:200; color:var(--bone); line-height:1; margin-bottom:var(--space-2);">~<span style="color:var(--brass);">68%</span></p>
+                <p style="font-size:var(--text-sm); color:rgba(244,241,234,0.75); line-height:var(--leading-relaxed);">Response rate in TRD reported in published brain-stimulation meta-analyses. Individual results vary.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chronic Pain -->
+    <section class="section section--lg bg-surface" id="pain" aria-labelledby="pain-title">
+      <div class="container">
+        <div class="cond-row cond-row--visual-first">
+          <div class="reveal reveal-delay-1" style="background:var(--deep-pine); padding:0; aspect-ratio:4/5; position:relative; overflow:hidden;">
+            <img
+              src="assets/images/chronic-pain.jpg"
+              alt="Person experiencing chronic pain — neurotherapy offers a new treatment pathway"
+              loading="lazy"
+              class="img-fill"
+              style="opacity:0.72;"
+            >
+            <div class="img-overlay" style="background:linear-gradient(180deg, rgba(21,41,32,0.18) 0%, rgba(21,41,32,0.62) 100%);"></div>
+            <div style="position:relative; z-index:2; padding:var(--space-10); height:100%; display:flex; flex-direction:column; justify-content:flex-end;">
+              <p style="font-family:var(--font-display); font-size:var(--text-2xl); font-weight:300; color:var(--bone); line-height:1.2; font-style:italic;">"The pain that persists is not a character flaw. It is a neurological pattern."</p>
+            </div>
+          </div>
+          <div>
+            <p class="section-label reveal">02</p>
+            <h2 style="font-size:clamp(2rem,4vw,var(--text-4xl)); color:var(--deep-pine); margin-bottom:var(--space-5); font-weight:300; line-height:1.15;" class="reveal reveal-delay-1" id="pain-title">
+              Chronic Pain<br>Management
+            </h2>
+            <p style="color:var(--color-text-muted); line-height:var(--leading-relaxed); margin-bottom:var(--space-5);" class="reveal reveal-delay-2">
+              Chronic pain is not simply pain that has persisted — it represents a fundamental change in how the nervous system processes sensation. Over time, pain circuits can become sensitised, meaning the brain generates a pain experience that is no longer accurately proportional to tissue damage.
+            </p>
+            <p style="color:var(--color-text-muted); line-height:var(--leading-relaxed); margin-bottom:var(--space-8);" class="reveal reveal-delay-3">
+              Neuromodulation targets these central sensitisation processes directly — modulating pain-processing networks in the brain rather than attempting to block peripheral pain signals. For patients who have found limited relief through analgesics, physiotherapy, or other conventional approaches, this represents a fundamentally different intervention point.
+            </p>
+
+            <div class="reveal reveal-delay-3" style="background:var(--white); border:1px solid var(--color-border); padding:var(--space-8); margin-bottom:var(--space-8);">
+              <h3 style="font-family:var(--font-display); font-size:var(--text-lg); color:var(--deep-pine); margin-bottom:var(--space-4);">Relevant therapies</h3>
+              <ul style="display:flex; flex-direction:column; gap:var(--space-3);">
+                <li style="display:flex; align-items:flex-start; gap:var(--space-3); font-size:var(--text-sm); color:var(--color-text-muted); line-height:var(--leading-relaxed);">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brass)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink:0; margin-top:5px;"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span><a href="treatments.html#tdcs" style="color:var(--deep-pine); font-weight:500;">tDCS</a> &mdash; available now, primary option for chronic pain</span>
+                </li>
+                <li style="display:flex; align-items:flex-start; gap:var(--space-3); font-size:var(--text-sm); color:var(--color-text-muted); line-height:var(--leading-relaxed);">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brass)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink:0; margin-top:5px;"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span><a href="treatments.html#tvns" style="color:var(--deep-pine); font-weight:500;">tVNS</a> &mdash; available now, for pain conditions with an inflammatory or autonomic component</span>
+                </li>
+                <li style="display:flex; align-items:flex-start; gap:var(--space-3); font-size:var(--text-sm); color:var(--color-text-muted); line-height:var(--leading-relaxed);">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brass)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink:0; margin-top:5px;"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span><a href="treatments.html#tms" style="color:var(--deep-pine); font-weight:500;">TMS</a> &mdash; joining our offering as we grow</span>
+                </li>
+              </ul>
+              <p style="font-size:var(--text-sm); color:var(--color-text-muted); line-height:var(--leading-relaxed); margin-top:var(--space-5); padding-top:var(--space-5); border-top:1px solid var(--color-border);">
+                <strong style="color:var(--deep-pine); font-weight:500;">Why tDCS for chronic pain.</strong> Of our therapies, tDCS has the most direct evidence base in persistent pain. Applied over the motor cortex or the prefrontal cortex, it appears to act on the way the brain amplifies and sustains pain signals &mdash; the central sensitisation described above &mdash; rather than on the painful area itself. Sessions are short and non-invasive, benefit typically builds gradually across a course rather than arriving in one session, and it can sit alongside the pain management, physiotherapy or medication you already have.
+              </p>
+            </div>
+
+            <a href="contact.html" class="btn btn--pine reveal reveal-delay-4">
+              Ask if this could help you
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Anxiety -->
+    <section class="section section--lg bg-bone" id="anxiety" aria-labelledby="anxiety-title">
+      <div class="container">
+        <div class="cond-row">
+          <div>
+            <p class="section-label reveal">03</p>
+            <h2 style="font-size:clamp(2rem,4vw,var(--text-4xl)); color:var(--deep-pine); margin-bottom:var(--space-5); font-weight:300; line-height:1.15;" class="reveal reveal-delay-1" id="anxiety-title">
+              Anxiety<br>Disorders
+            </h2>
+            <p style="color:var(--color-text-muted); line-height:var(--leading-relaxed); margin-bottom:var(--space-5);" class="reveal reveal-delay-2">
+              Anxiety becomes a clinical concern when the body&rsquo;s threat response stays switched on long after any real threat has passed. Generalised anxiety, social anxiety and OCD all involve circuits that have learned to over-predict danger &mdash; which is why reasoning with the feeling so rarely settles it.
+            </p>
+            <p style="color:var(--color-text-muted); line-height:var(--leading-relaxed); margin-bottom:var(--space-5);" class="reveal reveal-delay-2">
+              Much of this activity centres on the prefrontal cortex and its regulation of deeper limbic structures. When that top-down control weakens, the alarm runs unchecked. Neuromodulation aims at exactly this relationship &mdash; supporting regulatory control rather than sedating the response.
+            </p>
+            <p style="color:var(--color-text-muted); line-height:var(--leading-relaxed); margin-bottom:var(--space-8);" class="reveal reveal-delay-3">
+              For people whose anxiety has not responded adequately to medication or psychological therapy, this offers a different point of intervention &mdash; one that can sit alongside the therapy or medication you are already receiving, not in place of it.
+            </p>
+            <a href="contact.html" class="btn btn--pine reveal reveal-delay-4">
+              Ask if this could help you
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+          <div>
+            <div class="reveal" style="background:var(--white); border:1px solid var(--color-border); padding:var(--space-8); margin-bottom:var(--space-4);">
+              <h3 style="font-family:var(--font-display); font-size:var(--text-lg); color:var(--deep-pine); margin-bottom:var(--space-4);">Relevant therapies</h3>
+              <ul style="display:flex; flex-direction:column; gap:var(--space-3);">
+                <li style="display:flex; align-items:center; gap:var(--space-3); font-size:var(--text-sm); color:var(--color-text-muted);">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brass)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                  <a href="treatments.html#tvns" style="color:var(--deep-pine); font-weight:500;">tVNS</a> &mdash; available now, primary option
+                </li>
+                <li style="display:flex; align-items:center; gap:var(--space-3); font-size:var(--text-sm); color:var(--color-text-muted);">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brass)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                  <a href="treatments.html#tdcs" style="color:var(--deep-pine); font-weight:500;">tDCS</a> &mdash; available now, prefrontal regulation
+                </li>
+                <li style="display:flex; align-items:center; gap:var(--space-3); font-size:var(--text-sm); color:var(--color-text-muted);">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brass)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                  <a href="treatments.html#tms" style="color:var(--deep-pine); font-weight:500;">TMS</a> &mdash; joining our offering as we grow
+                </li>
+              </ul>
+            </div>
+            <div class="reveal reveal-delay-1" style="background:var(--deep-pine); padding:var(--space-8); position:relative; overflow:hidden; min-height:160px;">
+              <p style="font-family:var(--font-display); font-size:var(--text-lg); font-style:italic; color:var(--bone); line-height:var(--leading-snug); margin-bottom:var(--space-3);">
+                "Calm is not the absence of a threat. It is a nervous system that can tell the difference."
+              </p>
+              <p style="font-size:var(--text-xs); color:rgba(244,241,234,0.55); line-height:var(--leading-relaxed);">
+                Any therapy is considered alongside your existing care, never as a replacement for it.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Further conditions — brief overview -->
+    <section class="section bg-pine" id="also-supported" aria-labelledby="more-title">
+      <div class="container">
+        <p class="section-label reveal" style="color:var(--brass);">Also supported</p>
+        <h2 style="font-size:clamp(2rem,4vw,var(--text-4xl)); color:var(--bone); margin-bottom:var(--space-16); font-weight:300;" class="reveal reveal-delay-1" id="more-title">
+          Further conditions
+        </h2>
+        <div class="cond-more-grid">
+
+          <div class="reveal cond-more-card" id="neurorehab">
+            <p class="cond-more-card__num">04</p>
+            <h3 class="cond-more-card__title">Parkinson&rsquo;s &amp; Movement Disorders</h3>
+            <p class="cond-more-card__body">
+              Parkinson&rsquo;s disease and related movement disorders involve changes in motor circuits deep within the brain. Targeted neuromodulation is being studied as a way to support motor control, gait and fatigue alongside standard neurological care &mdash; never in place of it.
+            </p>
+            <a href="contact.html" class="btn btn--outline cond-more-card__cta">Enquire</a>
+          </div>
+
+          <div class="reveal reveal-delay-1 cond-more-card" id="stroke">
+            <p class="cond-more-card__num">05</p>
+            <h3 class="cond-more-card__title">Stroke Recovery &amp; Neuro-Rehabilitation</h3>
+            <p class="cond-more-card__body">
+              After a stroke or traumatic brain injury, recovery depends on the brain&rsquo;s capacity to reorganise. Neuromodulation may be used to support that neuroplasticity, and is considered as an adjunct to physiotherapy, occupational therapy and speech therapy.
+            </p>
+            <a href="contact.html" class="btn btn--outline cond-more-card__cta">Enquire</a>
+          </div>
+
+          <div class="reveal reveal-delay-2 cond-more-card" id="insomnia">
+            <p class="cond-more-card__num">06</p>
+            <h3 class="cond-more-card__title">Insomnia &amp; Sleep</h3>
+            <p class="cond-more-card__body">
+              Persistent sleep difficulty often travels with mood and anxiety conditions. Where it does, addressing the underlying regulation may support sleep alongside your existing care.
+            </p>
+            <a href="contact.html" class="btn btn--outline cond-more-card__cta">Enquire</a>
+          </div>
+
+          <div class="reveal cond-more-card" id="dementia">
+            <p class="cond-more-card__num">07</p>
+            <h3 class="cond-more-card__title">Cognitive Decline &amp; Dementia</h3>
+            <p class="cond-more-card__body">
+              Research into neuromodulation for memory and cognitive function is active but early. We assess each case individually and will be candid about what the evidence does and does not yet show.
+            </p>
+            <a href="contact.html" class="btn btn--outline cond-more-card__cta">Enquire</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Not sure -->
+    <section class="section bg-bone">
+      <div class="container">
+        <div style="max-width:700px; margin:0 auto; text-align:center;">
+          <p class="section-label reveal" style="justify-content:center;">Not sure</p>
+          <h2 style="font-size:clamp(2rem,4vw,var(--text-4xl)); color:var(--deep-pine); margin-bottom:var(--space-5); font-weight:300;" class="reveal reveal-delay-1">
+            Not certain if AntaraNeuro is right for you?
+          </h2>
+          <p style="color:var(--color-text-muted); font-weight:300; margin-bottom:var(--space-10); line-height:var(--leading-relaxed);" class="reveal reveal-delay-2">
+            We'd rather you contact us with a question and find out neurotherapy isn't the right path, than spend more time uncertain. Our initial conversations are no-obligation, and our team will always give you an honest assessment.
+          </p>
+          <div style="display:flex; justify-content:center; gap:var(--space-4); flex-wrap:wrap;" class="reveal reveal-delay-3">
+            <a href="contact.html" class="btn btn--primary btn--lg">Speak With Our Team</a>
+            <a href="treatments.html" class="btn btn--outline-pine">Browse Treatments</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__main">
+        <div class="footer__brand">
+          <div class="footer__logo"><img src="assets/images/logo.png" alt="AntaraNeuro Clinics" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'"><span class="footer__logo-text" style="display:none;">AntaraNeuro</span></div>
+          <p class="footer__tagline">"Safe. Non-invasive. Designed for people who've been searching for a better way."</p>
+          <div class="footer__office"><span class="footer__office-label">Registered Office</span><address class="footer__office-address">One North Apartment, H1601,<br>Magarpatta, Hadapsar I.E.,<br>Pune City, Pune 411013,<br>Maharashtra, India</address><p class="footer__cin">AntaraNeuro Clinics Private Limited<br>CIN: [CIN]<br>GSTIN: [GSTIN]</p></div>
+          <div class="footer__social" aria-label="Social media links"><a href="https://www.linkedin.com/company/antaraneuro-clinics" class="footer__social-link" aria-label="AntaraNeuro Clinics on LinkedIn" target="_blank" rel="noopener noreferrer"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zm1.78 13.02H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a></div>
+        </div>
+        <nav aria-label="Treatments"><span class="footer__col-title">Treatments</span><ul class="footer__links"><li><a href="treatments.html#tdcs" class="footer__link">tDCS</a></li><li><a href="treatments.html#tvns" class="footer__link">tVNS</a></li><li><a href="treatments.html#tms" class="footer__link">TMS</a></li><li><a href="treatments.html#tps" class="footer__link">TPS</a></li><li><a href="conditions.html" class="footer__link">Conditions we treat</a></li></ul></nav>
+        <nav aria-label="Company"><span class="footer__col-title">AntaraNeuro</span><ul class="footer__links"><li><a href="about.html" class="footer__link">Our Story</a></li><li><a href="about.html#network" class="footer__link">Clinical Team</a></li><li><a href="platform.html" class="footer__link">Our Platform</a></li><li><a href="corporate-wellness.html" class="footer__link">Corporate Wellness</a></li><li><a href="locations.html" class="footer__link">Clinics</a></li><li><a href="contact.html" class="footer__link">Book a Consultation</a></li></ul></nav>
+        <div><span class="footer__col-title">Contact</span><ul class="footer__links"><li><a href="mailto:contact@antaraneuroclinics.com" class="footer__link">contact@antaraneuroclinics.com</a></li><li><a href="tel:+917249310743" class="footer__link">+91 724-9310743</a></li><li><a href="contact.html#offices" class="footer__link">Registered Office</a></li><li><a href="contact.html" class="footer__link">General enquiries</a></li><li><a href="https://app.antaraneuroclinics.com/login" class="footer__link">Patient / Clinic Login</a></li></ul><span class="footer__col-title" style="margin-top:var(--space-10);">Forms</span><ul class="footer__links" role="list"><li><a href="neuromodulation-interest" class="footer__link">Neuromodulation Interest Form</a></li></ul></div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2026 AntaraNeuro Clinics Pvt Ltd. All rights reserved.</p>
+        <p class="footer__motto">When medicine alone wasn't enough.</p>
+        <div class="footer__legal"><a href="privacy-policy.html" class="footer__legal-link">Privacy Policy</a><a href="terms-of-use.html" class="footer__legal-link">Terms of Use</a><a href="refund-policy.html" class="footer__legal-link">Cancellation &amp; Refund Policy</a><a href="medical-disclaimer.html" class="footer__legal-link">Medical Disclaimer</a><a href="privacy-policy.html#grievance" class="footer__legal-link">Grievance</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="mobile-cta-bar"><a href="contact.html" class="btn btn--primary">Book Consultation</a><a href="tel:+917249310743" class="btn btn--outline">Call Us</a></div>
+  <script src="js/scripts.js?v=bf6295ce"></script>
+</body>
+</html>

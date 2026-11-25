@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://antaraneuroclinics.com/sitemap.xml
